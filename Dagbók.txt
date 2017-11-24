@@ -1,6 +1,15 @@
-Ey��r og Illugi
+Eyþór og Illugi
 
 17.11.2017
 
-Fyrsti t�minn sem vi� f�um �etta verkefni, erum a� reyna a� komast a� �v� hva�a a�fer� vi� �tlum a� nota.
-Erum enn�� a� reyna a� melta leikreglurnar �ar sem ��r eru g�furlega margar. B�i� er a� gera github repository � nafni illuga.
+Fyrsti tíminn sem við fáum þetta verkefni, erum að reyna að komast að því hvaða aðferð við ætlum að nota.
+Erum ennþá að reyna að melta leikreglurnar þar sem þær eru gífurlega margar. Búið er að gera github repository á nafni illuga.
+
+20.11.2017
+
+Unnum í því að færa rottur og mýs um reiti og gekk það bara vel. Forritið lætur okkur vita þegar mús lendir á rottu og þarf að berjast.
+Erum þó ekki búnir að bæta við hömstrum og gefa rottunum afl, gerum það örugglega í næsta tíma.
+
+24.11.2017
+
+Erum að vinna í því að gefa rottum afl og bæta við hömstrum. Rottur eru komnar og nú erum við einungis að vinna í baráttu milli rottu og mús.
