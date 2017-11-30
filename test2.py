@@ -1,95 +1,104 @@
 import random
-def randomdef():
-    listi = [2,4,6]
-    return random.choice(listi)
-class Nagdyr:
+#Illugi og Eyþór
 
-    def __init__(self,tegund,location,afl):
+class Nagdyr:
+    def __init__(self,location,afl,tegund):
         self.location = location
         self.afl = afl
         self.tegund = tegund
-    def prenta(self):
-        print("Rotta er á reit",self.location)
-    def newturn(self):
-        kast = random.randint ( -6, 6 )
+    def musnewturn(self):
+        kast = random.randint(1,6)
         self.location += kast
         if self.location > 100:
             self.location = 100
-        elif self.location < 0:
-            self.location = 0
-    def locationreturn(self):
-        return self.location
-
-'''
-        if self.location < 1:
+        return str(kast)
+    def rottanewturn(self):
+        listi = [1,2]
+        choice = random.choice(listi)
+        if choice == 1:
             self.location += random.randint(1,6)
-        elif self.location < 0:
-            self.location = 0
-        elif self.location > 100:
-            self.location = 100
-        else:
-            self.location += random.randint(-6,6)
-'''
+        elif choice == 2:
+            self.location -= random.randint(1,6)
 
-class Mus:
-    def __init__(self,location,afl):
-        self.location = location
-        self.afl = afl
-    def newturn(self):
-        self.location += random.randint(1,6)
-    def prenta(self):
         if self.location > 100:
             self.location = 100
-        print("Mús er á reit",self.location)
-    def locationreturn(self):
-        return self.location
+        elif self.location < 0:
+            self.location = 0
+    def hamsturnewturn(self,mus):
+        if self.location > mus.location:
+            print("Hamstur fer afturábak til músar sem er á reit",mus.location,"og hamstur er á",self.location)
+            self.location -= random.randint(1,6)
+        elif self.location < mus.location:
+            print("Hamstur fer áfram til músar sem er á reit",mus.location,"og hamstur er á",self.location)
+            self.location += random.randint(1,6)
 
-def baratta(musobj,rottaobj):
+
+
+def baratta(mus,rotta):
     print("Mús þarf að berjast við rottu")
-    if musobj.afl > rottaobj.afl:
-        musobj.location += 2
-    elif musobj.afl == rottaobj.afl:
-        musobj.location += 0
-    else:
-        musobj.location -= 2
-def hvorrotta(mus,rotta1,rotta2,rotta3,listi):
-        for x in range(listi):
-            if x == rotta1:
-                return rotta1
-            elif x == rotta2:
-                return rotta2
-            elif x == rotta3:
-                return rotta3
-            else:
-                pass
+    if mus.afl > rotta.afl:
+        print("MÚS VANN LETS GO +2 LOC")
+        mus.location += 2
+    elif mus.afl == rotta.afl:
+        print("Jafntefli 0+- loc")
+        mus.location += 0
+    elif rotta.afl > mus.afl:
+        print("Mús er weak shit -2 loc")
+        mus.location -= 2
 
+def hamstrahelp(mus,hamstur):
+    print("Hamstur ætlar sér að hjálpa músar fellanum")
+    mus.location += hamstur.afl
+    print("Hamstur færir mús um",hamstur.afl)
+    print(mus.location)
+
+def randomafl():
+    listi = [2,4,6]
+    return random.choice(listi)
 def main():
-    mus = Mus(1,randomdef())
-    rotta1 = Nagdyr("Rotta",random.randint(1,100),randomdef())
-    rotta2 = Nagdyr("Rotta",random.randint(1,100),randomdef())
-    rotta3 = Nagdyr("Rotta",random.randint(1,100),randomdef())
-    while mus.location < 100:
-        listi = []
-        oldmus = mus.locationreturn ()
-        mus.newturn ()
-        rotta1.newturn()
-        rotta2.newturn()
-        rotta3.newturn()
-        rotta1.prenta()
-        rotta2.prenta()
-        rotta3.prenta()
-        mus.prenta()
-        for x in range(oldmus,mus.locationreturn()):
-            listi.append(x)
-        if len(listi) == 1:
-            pass
-        else:
-            try:
-                listi.pop(0)
-            except (IndexError):
-                pass
-             
-        print("Kastar",len(listi),listi)
-        hvorrotta(mus,rotta1,rotta2,rotta3,listi)
+    mus = Nagdyr(1,randomafl(),"Mús")
+    kost=0
+    rotta1 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
+    rotta2 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
+    rotta3 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
+    hamstur = Nagdyr(random.randint(0,100),randomafl(),"Hamstur")
+    print("Mús er á reit :", mus.location)
+    print("Rotta 1 er á reit :", rotta1.location)
+    print("Rotta 2 er á reit :", rotta2.location)
+    print("Rotta 3 er á reit :", rotta3.location)
+    print("Hamstur er á reit :", hamstur.location)
+    print("Mus færðist um " + mus.musnewturn() + " reiti")
+    while True:
+        if mus.location >= 100:
+            print("jei musin vann shi mar, þetta tók ekki nema",kost,"köst!")
+            break
+        old1 = rotta1.location
+        old2 = rotta2.location
+        old3 = rotta3.location
+        old4 = mus.location
+        old5 = hamstur.location
+        rotta1.rottanewturn ()
+        rotta2.rottanewturn ()
+        rotta3.rottanewturn ()
+        hamstur.hamsturnewturn(mus)
+        print("Mús er á reit :", mus.location)
+        print("Rotta 1 er á reit :", rotta1.location)
+        print("Rotta 2 er á reit :", rotta2.location)
+        print("Rotta 3 er á reit :", rotta3.location)
+        print("Hamstur er á reit :", hamstur.location)
+        kost=kost+1
+        print("Mus færðist um "+mus.musnewturn()+" reiti")
+        if old4 < old1:
+            if mus.location >= rotta1.location:
+                baratta(mus,rotta1)
+        if old4 < old2:
+            if mus.location >= rotta2.location:
+                baratta ( mus, rotta2 )
+        if old4 < old3:
+            if mus.location >= rotta3.location:
+                baratta ( mus, rotta3 )
+        if old4 < old5:
+            if mus.location >= hamstur.location:
+                hamstrahelp(mus,hamstur)
 
 main()
