@@ -1,4 +1,5 @@
 import random
+import time
 #Illugi og Eyþór
 
 class Nagdyr:
@@ -49,8 +50,26 @@ def baratta(mus,rotta):
 def hamstrahelp(mus,hamstur):
     print("Hamstur ætlar sér að hjálpa músar fellanum")
     mus.location += hamstur.afl
-    print("Hamstur færir mús um",hamstur.afl)
-    print(mus.location)
+    hamstur.location += int(hamstur.afl/2)
+    print("Hamstur færir mús um",hamstur.afl,"reiti")
+    print("Hamstur færist einnig um",int(hamstur.afl/2),"reiti")
+    print("Mús er á reit",mus.location)
+
+def hamsturogrotta(hamstur,rotta):
+    print("Rotta og hamstur rákust á! þeir hrökklast frá hvorum öðrum.")
+    rotta.location -=1
+    hamstur.location+=1
+    print("Hamstur er nú á reit",hamstur.location)
+    print("Rotta er nú á reit",rotta.location)
+
+def happareitur(mus):
+    happa=random.randint(1,2)
+    if happa==1:
+        print("Mikið er þessi mús óheppin! 10 reiti til baka!")
+        mus.location -= 10
+    elif happa==2:
+        print("Heppin mús! 10 reiti áfram!")
+        mus.location += 10
 
 def randomafl():
     listi = [2,4,6]
@@ -62,12 +81,7 @@ def main():
     rotta2 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
     rotta3 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
     hamstur = Nagdyr(random.randint(0,100),randomafl(),"Hamstur")
-    print("Mús er á reit :", mus.location)
-    print("Rotta 1 er á reit :", rotta1.location)
-    print("Rotta 2 er á reit :", rotta2.location)
-    print("Rotta 3 er á reit :", rotta3.location)
-    print("Hamstur er á reit :", hamstur.location)
-    print("Mus færðist um " + mus.musnewturn() + " reiti")
+    time.sleep(0.5)
     while True:
         if mus.location >= 100:
             print("jei musin vann shi mar, þetta tók ekki nema",kost,"köst!")
@@ -99,6 +113,15 @@ def main():
                 baratta ( mus, rotta3 )
         if old4 < old5:
             if mus.location >= hamstur.location:
-                hamstrahelp(mus,hamstur)
-
+                hamstrahelp(mus, hamstur)
+        if old5 == old1:
+            hamsturogrotta(hamstur,rotta1)
+        if old5 == old2:
+            hamsturogrotta(hamstur,rotta2)
+        if old5 == old3:
+            hamsturogrotta(hamstur,rotta3)
+        if mus.location == 50:
+            happareitur(mus)
+        print(old4,old5)
+        time.sleep(0.5)
 main()
