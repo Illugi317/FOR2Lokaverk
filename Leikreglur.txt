@@ -1,0 +1,27 @@
+Músaspilið - Leikreglur
+
+Spilið gengur út á að koma músinni á reit 100 en á vegi hennar eru rottur og hamstrar.
+Það eru þrjár rottur og einn hamstur.
+Öll nagdýr geta verið með afl (2,4,6).
+Ef mús lendir eða fer framhjá rottu þarf mús að berjast við rottu, úrslit bardagans fer eftir styrk músarinnar og rottunnar sem gefið er í byrjun leiks.
+Ef mús vinnur rottuna fer músin 2 reiti áfram, ef mús og rotta eru með jafnan styrk þá heldur músin sér á sama reit, ef rottan vinnur músina fer músin 2 reiti til baka.
+Hamstur eltir músina allan leikinn og ef mús lendir á sama reit og hamstur skýtur hamstur músinni áfram jafn langt og afl hamstrins, hamsturinn færist helminginn af afli sínu í átt að músinni.
+Reitur 50 er happareitur, sem gerir það að verkum að mús færist annaðhvort 10 reiti áfram eða 10 reiti til baka. (50/50 líkur)*****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***** - veit ekki hvort við ætlum að hafa þessa reglu
