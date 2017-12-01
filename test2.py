@@ -65,11 +65,11 @@ def hamsturogrotta(hamstur,rotta):
 def happareitur(mus):
     happa=random.randint(1,2)
     if happa==1:
-        print("Mikið er þessi mús óheppin! 10 reiti til baka!")
-        mus.location -= 10
+        print("Mikið er þessi mús óheppin! 5 reiti til baka!")
+        mus.location -= 5
     elif happa==2:
-        print("Heppin mús! 10 reiti áfram!")
-        mus.location += 10
+        print("Heppin mús! 5 reiti áfram!")
+        mus.location += 5
 
 def randomafl():
     listi = [2,4,6]
