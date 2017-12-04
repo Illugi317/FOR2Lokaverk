@@ -3,10 +3,11 @@ import time
 #Illugi og Eyþór
 
 class Nagdyr:
-    def __init__(self,location,afl,tegund):
+    def __init__(self,location,afl,weight,tegund):
         self.location = location
         self.afl = afl
         self.tegund = tegund
+        self.weight = weight
     def musnewturn(self):
         kast = random.randint(1,6)
         self.location += kast
@@ -36,15 +37,27 @@ class Nagdyr:
 
 
 def baratta(mus,rotta):
-    print("Mús þarf að berjast við rottu")
-    if mus.afl > rotta.afl:
+    print("Mús þarf að BERJAST við rottu")
+    if mus.afl > rotta.afl and mus.weight == 750 and rotta.weight == 250:
         print("MÚS VANN LETS GO +2 LOC")
         mus.location += 2
-    elif mus.afl == rotta.afl:
-        print("Jafntefli 0+- loc")
+    elif rotta.afl > mus.afl and mus.weight == 750 and rotta.weight == 250:
+        print("Mús vann vegna þyngdar")
+        mus.location += 2
+    elif mus.afl == rotta.afl and mus.weight == 750 and rotta.weight == 250:
+        print("Mús vann vegna þyngdar --")
+        mus.location +=2
+    elif mus.afl == rotta.afl and mus.weight == 500 or rotta.afl == 500:
+        print("Jafntefli!")
         mus.location += 0
-    elif rotta.afl > mus.afl:
-        print("Mús er weak shit -2 loc")
+    elif mus.afl == rotta.afl and mus.weight == 250 and rotta.weight == 750:
+        print("Rotta vann vegna þyngdar++")
+        mus.location -= 2
+    elif rotta.afl > mus.afl and mus.weight == 250 and rotta.weight == 750:
+        print("Mús er weak shit -2 loc//")
+        mus.location -= 2
+    elif rotta.afl > mus.afl and mus.weight == 500 or rotta.weight == 500:
+        print("Rottan er sterkari, mus er weak shit -2 loc")
         mus.location -= 2
 
 def hamstrahelp(mus,hamstur):
@@ -71,17 +84,29 @@ def happareitur(mus):
         print("Heppin mús! 5 reiti áfram!")
         mus.location += 5
 
+def weight():
+    listi = [250,500,750]
+    return random.choice(listi)
+
 def randomafl():
     listi = [2,4,6]
     return random.choice(listi)
 def main():
-    mus = Nagdyr(1,randomafl(),"Mús")
+    mus = Nagdyr(1,randomafl(),weight(),"Mús")
     kost=0
-    rotta1 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
-    rotta2 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
-    rotta3 = Nagdyr(random.randint(0,100),randomafl(),"Rotta")
-    hamstur = Nagdyr(random.randint(0,100),randomafl(),"Hamstur")
-    time.sleep(0.5)
+    rotta1 = Nagdyr(random.randint(0,100),randomafl(),weight(),"Rotta")
+    rotta2 = Nagdyr(random.randint(0,100),randomafl(),weight(),"Rotta")
+    rotta3 = Nagdyr(random.randint(0,100),randomafl(),weight(),"Rotta")
+    hamstur = Nagdyr(random.randint(0,100),randomafl(),weight(),"Hamstur")
+    print("Mús er með :",mus.afl)
+    print("Mús er með :",mus.weight)
+    print("rotta1 :",rotta1.weight)
+    print("Rotta2 :",rotta2.weight)
+    print("Rotta3 :",rotta3.weight)
+    print("rotta1 afl:",rotta1.afl)
+    print("rotta2 afl:",rotta2.afl)
+    print("rotta3 afl:",rotta3.afl)
+    time.sleep(1)
     while True:
         if mus.location >= 100:
             print("jei musin vann shi mar, þetta tók ekki nema",kost,"köst!")
@@ -114,14 +139,12 @@ def main():
         if old4 < old5:
             if mus.location >= hamstur.location:
                 hamstrahelp(mus, hamstur)
-        if old5 == old1:
+        if hamstur.location == rotta1.location:
             hamsturogrotta(hamstur,rotta1)
-        if old5 == old2:
+        if hamstur.location == rotta2.location:
             hamsturogrotta(hamstur,rotta2)
-        if old5 == old3:
+        if hamstur.location == rotta3.location:
             hamsturogrotta(hamstur,rotta3)
         if mus.location == 50:
             happareitur(mus)
-        print(old4,old5)
-        time.sleep(0.5)
 main()
