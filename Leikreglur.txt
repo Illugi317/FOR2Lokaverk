@@ -1,18 +1,16 @@
-Músaspiliğ - Leikreglur
+MÃºsaspiliÃ° - Leikreglur
 
-Spiliğ gengur út á ağ koma músinni á reit 100 en á vegi hennar eru rottur og hamstrar.
-Şağ eru şrjár rottur og einn hamstur.
-Öll nagdır geta veriğ meğ afl (2,4,6).
-Ef mús lendir eğa fer framhjá rottu şarf mús ağ berjast viğ rottu, úrslit bardagans fer eftir styrk músarinnar og rottunnar sem gefiğ er í byrjun leiks.
-Ef mús vinnur rottuna fer músin 2 reiti áfram, ef mús og rotta eru meğ jafnan styrk şá heldur músin sér á sama reit, ef rottan vinnur músina fer músin 2 reiti til baka.
-Hamstur eltir músina allan leikinn og ef mús lendir á sama reit og hamstur skıtur hamstur músinni áfram jafn langt og afl hamstrins, hamsturinn færist helminginn af afli sínu í átt ağ músinni.
-Reitur 50 er happareitur, sem gerir şağ ağ verkum ağ mús færist annağhvort 10 reiti áfram eğa 10 reiti til baka. (50/50 líkur)*****
-
-
-
-
-
-
+SpiliÃ° gengur Ãºt Ã¡ aÃ° koma mÃºsinni Ã¡ reit 100 en Ã¡ vegi hennar eru rottur og hamstrar.
+ÃaÃ° eru Ã¾rjÃ¡r rottur og einn hamstur.
+Ã–ll nagdÃ½r geta veriÃ° meÃ° afl (2,4,6) og Ã¾yngd(250, 500, 750).
+Ef mÃºs lendir eÃ°a fer framhjÃ¡ rottu Ã¾arf mÃºs aÃ° berjast viÃ° rottu, Ãºrslit bardagans fer eftir styrk og Ã¾yngd mÃºsarinnar og rottunnar sem gefiÃ° er Ã­ byrjun leiks.
+Ãyngd rottu og mÃºsar hafa einnig Ã¡hrif Ã¡ bardagann, ef mÃºs hefur meira afl Ã¾Ã¡ vinnur mÃºsin og Ã¶fugt en ef mÃºs og rotta hafa jafnmikiÃ° afl skiptir Ã¾yngd miklu mÃ¡li.
+Ef mÃºs er 500gr Ã¾yngri Ã­ jafntefli en rotta Ã¾Ã¡ vinnur mÃºs og Ã¶fugt.
+Rottur kasta tening og geta fariÃ° Ã¡fram eÃ°a til baka.
+Ef mÃºs vinnur rottuna fer mÃºsin 2 reiti Ã¡fram, ef mÃºs og rotta eru meÃ° jafnan styrk Ã¾Ã¡ heldur mÃºsin sÃ©r Ã¡ sama reit, ef rottan vinnur mÃºsina fer mÃºsin 2 reiti til baka.
+Hamstur eltir mÃºsina allan leikinn og ef mÃºs lendir Ã¡ sama reit og hamstur skÃ½tur hamstur mÃºsinni Ã¡fram jafn langt og afl hamstrins, hamsturinn fÃ¦rist helminginn af afli sÃ­nu Ã­ Ã¡tt aÃ° mÃºsinni.
+Reitur 50 er happareitur, sem gerir Ã¾aÃ° aÃ° verkum aÃ° mÃºs fÃ¦rist annaÃ°hvort 10 reiti Ã¡fram eÃ°a 10 reiti til baka. (50/50 lÃ­kur)
+MÃºs vinnur Ã¾egar hÃºn kemur Ã¡ reit 100 og birtist Ã¾Ã¡ tala yfir hversu oft hÃºn kastaÃ°i.
 
 
 
@@ -24,4 +22,4 @@ Reitur 50 er happareitur, sem gerir şağ ağ verkum ağ mús færist annağhvort 10 re
 
 
 
-***** - veit ekki hvort viğ ætlum ağ hafa şessa reglu
+
