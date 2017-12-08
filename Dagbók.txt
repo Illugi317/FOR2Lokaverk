@@ -12,4 +12,31 @@ Erum þó ekki búnir að bæta við hömstrum og gefa rottunum afl, gerum það
 
 24.11.2017
 
-Erum að vinna í því að gefa rottum afl og bæta við hömstrum. Rottur eru komnar og nú erum við einungis að vinna í baráttu milli rottu og mús.
+Erum að vinna í því að gefa rottum afl og bæta við hömstrum.
+Rottur eru komnar og nú erum við einungis að vinna í baráttu milli rottu og mús.
+
+27.11.2017
+
+Hamstrar eru komnir og eltir hamstur mús. Hamstur kastar tening og færist eftir honum í átt að músinni.
+Erum búnir að gera def fyrir þegar hamstur hittir mús en ekki búnir að fylla í það.
+
+
+1.12.2017
+
+Function hjá hömstrum er komið. Líka þegar hamstur rekst á rottu.
+Forritið birtir núna loka köst.
+
+4.12.2017
+
+Bættum við happareit og þyngd dýranna. Þyngd hefur mikil áhrif á leikreglur og bardaga.
+Settum delay á köstin svo hægt sé að fylgjast með hvað er að gerast.
+Fixuðum helsu bugs. Létum forritið birta afl og þyngd rottu og mús í byrjun leiks. 
+
+8.12.2017
+
+Allt komið, erum að klára leikreglur og dagbók. Búið að commenta verkefnið og allt í gúddí!
+
+
+
+
+
